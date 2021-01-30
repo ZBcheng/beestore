@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+service Files {
+    rpc QueryFile(QueryFileReq) returns(QueryFileResp) {}
+}
+
+message QueryFileReq {
+    string file_name = 1;
+    string file_hash = 2;
+}
+
+message QueryFileResp {
+    string file_name = 1;
+    string file_hash = 2;
+    int64  file_size = 3;
+}
